@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* General Styles & Background */
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-image: url('https://images.unsplash.com/photo-1710166755608-58b3d62db3a8?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+margin: 0;
+padding: 20px;
+color: #333;
+}
+
+/* 3-Column Grid Layout for Desktop */
+.portfolio-container {
+display: grid;
+grid-template-columns: 1fr  1fr;
+gap: 40px;
+max-width: 1400px;
+margin: 0 auto;
+}
+
+/* Card Styles (Glassmorphism look) */
+.card {
+background-color: rgba(255, 255, 255, 0.95);
+padding: 25px;
+border-radius: 16px;
+box-shadow: 0 4px 15px rgba(107, 70, 193, 0.1);
+border: 1px solid rgba(240, 230, 247, 0.8);
+backdrop-filter: blur(5px);
+}
+
+/* Left Column: Profile Side */
+.profile-side {
+text-align: center;
+}
+
+
+/* Centered Purple Headings */
+h2 {
+text-align: center;
+color: #4a154b;
+font-size: 1.9rem;
+margin-bottom: 25px;
+}
+
+/* Heading Icons */
+h2 i {
+color: #805ad5;
+margin-right: 10px; /* Space on the right for English layout */
+}
+
+/* Paragraphs (Justified for clean look) */
+p {
+text-align: justify;
+line-height: 1.7;
+color: #555;
+}
+
+/* Social Media Vertical Links with Text */
+.social-links {
+margin-top: 20px;
+display: flex;
+flex-direction: column;
+align-items: flex-start; /* Align text to the left */
+gap: 12px;
+padding-left: 15px;
+}
+
+.social-links a {
+color: #6b46c1;
+font-size: 0.95rem;
+text-decoration: none;
+display: flex;
+align-items: center;
+gap: 10px;
+transition: transform 0.2s, color 0.2s;
+}
+
+.social-links a:hover {
+transform: translateX(5px); /* Moves slightly right on hover for English */
+color: #805ad5;
+}
+
+.social-links a i {
+font-size: 1.4rem;
+width: 25px;
+text-align: center;
+}
+
+
+}
+
+/* Right Column: Interactive Lists */
+ul {
+list-style: none;
+padding: 0;
+}
+
+li.interactive-item {
+background: #fbf9ff;
+margin-bottom: 15px;
+padding: 15px;
+border-left: 4px solid #805ad5; 
+border-radius: 8px;
+font-size: 0.95rem;
+transition: all 0.3s ease;
+cursor: pointer;
+color: #333;
+}
+
+li.interactive-item:hover {
+transform: translateY(-5px);
+background-color: #f3ebfc;
+box-shadow: 0 5px 15px rgba(107, 70, 193, 0.15);
+}
+
+li i.item-icon {
+color: #6b46c1;
+margin-right: 8px; /* Space on the right of the icon */
+
+
+
+
+
+@keyframes slideIn {
+from { transform: translateY(100px); opacity: 0; }
+to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive layout for mobile phones */
+@media (max-width: 900px) {
+.portfolio-container {
+grid-template-columns: 1fr;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="portfolio-container">
+
+<aside class="card profile-side">
+
+<h2 style="color: #6b46c1;"><i class="fa-solid fa-user-astronaut"></i>Tasnim Ahmed ALraei</h2>
+<p style="text-align: center; font-weight: bold; color: #805ad5;">Management Information Systems Graduate </p>
+
+<div class="social-links">
+<a href="https://www.linkedin.com/in/TasnimAlraei" target="_blank">
+<i class="fa-brands fa-linkedin"></i>
+<span>LinkedIn: @TasnimAlraei</span>
+</a>
+
+<a href="https://tasnim.m.alraei@outlook.com">
+<i class="fa-solid fa-envelope"></i>
+<span>tasnim.m.alraei@outlook.com</span>
+</a>
+
+<a href="tel:+966 541 486 537">
+<i class="fa-solid fa-phone"></i>
+<span>Phone: +966 541 486 537</span>
+</a>
+</div>
+
+<hr style="border: 0; border-top: 1px solid #f0e6f7; margin: 20px 0;">
+<p>I have built this web page from scratch to bring my reume to life in Interactive way and to demostrate my front-end development and design skills.</p>
+</aside>
+
+
+<section class="card side-info">
+<h2><i class="fa-solid fa-graduation-cap"></i>Certificates & Courses</h2>
+<ul>
+<a href="file:///C:/Users/ASUS/Desktop/Completion%20Certificate%20_%20SkillsBuild.pdf" target="_blank" style="text-decoration: none;">
+<li class="interactive-item">
+<i class="fa-solid fa-award item-icon"></i>
+<strong>Data Analytics with Generative AI</strong> -IBM SkillsBuild | Completed: April 2026
+</li>
+</a>
+
+
+
+<a href="file:///C:/Users/ASUS/Desktop/almharat-alrqmyh-fy-mkan-alaml-certificate.pdf" target="_blank" style="text-decoration: none;">
+<li class="interactive-item">
+<i class="fa-solid fa-award item-icon"></i>
+<strong>Digital Skills in Workplace</strong> MISK | Completed: June 2026
+</li>
+<a href="file:///C:/Users/ASUS/Desktop/thlyl-alaamal-certificate.pdf" target="_blank" style="text-decoration: none;">
+<li class="interactive-item">
+<i class="fa-solid fa-code item-icon"></i>
+<strong>Business Analysis</strong> - MISK| Completed: June 2026
+</li>
+</a>
+<h2><i class="fa-solid fa-file"></i>Resume</h2>
+<a href="file:///C:/Users/ASUS/Desktop/Tasnim%20AlRaei%E2%80%99s%20CV%20NEW.pdf" target="_blank" style="text-decoration: none;">
+<li class="interactive-item">
+<i class="fa-solid fa-code item-icon"></i>
+<strong>My original CV</strong>- PDF
+</li>
+</a>
+</ul>
+
+</section>
+
+</div>
+
+<i class="fa-solid fa-code" style="position: fixed; bottom: 20px; left: 20px; color: rgba(107, 70, 193, 0.15); font-size: 5rem; z-index: -1;"></i>
+<i class="fa-solid fa-laptop" style="position: fixed; top: 40px; right: 20px; color: rgba(107, 70, 193, 0.1); font-size: 6rem; z-index: -1;"></i>
+
+
+</body>
+</html>
