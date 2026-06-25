@@ -23,16 +23,18 @@ color: #333;
 /* 3-Column Grid Layout for Desktop */
 .portfolio-container {
 display: grid;
-grid-template-columns: 1fr  1fr;
-gap: 40px;
-max-width: 1400px;
+grid-template-columns: 1.6fr 1fr;
+gap: 30px;
+max-width: 1240px;
 margin: 0 auto;
+
 }
+
 
 /* Card Styles (Glassmorphism look) */
 .card {
 background-color: rgba(255, 255, 255, 0.95);
-padding: 25px;
+padding: 20px;
 border-radius: 16px;
 box-shadow: 0 4px 15px rgba(107, 70, 193, 0.1);
 border: 1px solid rgba(240, 230, 247, 0.8);
@@ -42,8 +44,10 @@ backdrop-filter: blur(5px);
 /* Left Column: Profile Side */
 .profile-side {
 text-align: center;
-}
 
+box-shadow: 0 10px 25px rgba(107, 70, 193, 0.2) !important; /* ظلال أعمق وأفخم تعطي شعوراً بالبروز */
+position: relative;
+}
 
 /* Centered Purple Headings */
 h2 {
@@ -92,12 +96,9 @@ color: #805ad5;
 }
 
 .social-links a i {
-font-size: 1.4rem;
+font-size: 1.7rem;
 width: 25px;
 text-align: center;
-}
-
-
 }
 
 /* Right Column: Interactive Lists */
@@ -110,7 +111,7 @@ li.interactive-item {
 background: #fbf9ff;
 margin-bottom: 15px;
 padding: 15px;
-border-left: 4px solid #805ad5; 
+border-left: 4px solid #805ad5;
 border-radius: 8px;
 font-size: 0.95rem;
 transition: all 0.3s ease;
@@ -127,14 +128,11 @@ box-shadow: 0 5px 15px rgba(107, 70, 193, 0.15);
 li i.item-icon {
 color: #6b46c1;
 margin-right: 8px; /* Space on the right of the icon */
+}
 
-
-
-
-
-@keyframes slideIn {
-from { transform: translateY(100px); opacity: 0; }
-to { transform: translateY(0); opacity: 1; }
+/* Dashboard Specific Style Integration */
+.full-width-dashboard {
+grid-column: 1 / -1;
 }
 
 /* Responsive layout for mobile phones */
@@ -142,6 +140,7 @@ to { transform: translateY(0); opacity: 1; }
 .portfolio-container {
 grid-template-columns: 1fr;
 }
+
 }
 </style>
 </head>
@@ -150,7 +149,6 @@ grid-template-columns: 1fr;
 <div class="portfolio-container">
 
 <aside class="card profile-side">
-
 <h2 style="color: #6b46c1;"><i class="fa-solid fa-user-astronaut"></i>Tasnim Ahmed ALraei</h2>
 <p style="text-align: center; font-weight: bold; color: #805ad5;">Management Information Systems Graduate </p>
 
@@ -171,10 +169,9 @@ grid-template-columns: 1fr;
 </a>
 </div>
 
-<hr style="border: 0; border-top: 1px solid #f0e6f7; margin: 20px 0;">
-<p>I have built this web page from scratch to bring my reume to life in Interactive way and to demostrate my front-end development and design skills.</p>
+<hr style="border: 0; border-top: 1px solid #f0e6f7; margin: 40px 0;">
+<p>I have built this web page from scratch to bring my resume to life in Interactive way and to demonstrate my front-end development and design skills.</p>
 </aside>
-
 
 <section class="card side-info">
 <h2><i class="fa-solid fa-graduation-cap"></i>Certificates & Courses</h2>
@@ -186,35 +183,90 @@ grid-template-columns: 1fr;
 </li>
 </a>
 
-
-
 <a href="file:///C:/Users/ASUS/Desktop/almharat-alrqmyh-fy-mkan-alaml-certificate.pdf" target="_blank" style="text-decoration: none;">
 <li class="interactive-item">
 <i class="fa-solid fa-award item-icon"></i>
 <strong>Digital Skills in Workplace</strong> MISK | Completed: June 2026
 </li>
+</a>
+
 <a href="file:///C:/Users/ASUS/Desktop/thlyl-alaamal-certificate.pdf" target="_blank" style="text-decoration: none;">
 <li class="interactive-item">
 <i class="fa-solid fa-code item-icon"></i>
 <strong>Business Analysis</strong> - MISK| Completed: June 2026
 </li>
 </a>
-<h2><i class="fa-solid fa-file"></i>Resume</h2>
-<a href="file:///C:/Users/ASUS/Desktop/Tasnim%20AlRaei%E2%80%99s%20CV%20NEW.pdf" target="_blank" style="text-decoration: none;">
-<li class="interactive-item">
-<i class="fa-solid fa-code item-icon"></i>
-<strong>My original CV</strong>- PDF
-</li>
-</a>
-</ul>
-
 </section>
 
+<div class="dashboard-container full-width-dashboard" style="background-color:rgba(255, 255, 255, 0.95); padding: 9px; border-radius: 16px; box-shadow: 0 4px 15px rgba(107, 70, 193, 0.1); border: 1px solid rgba(240, 230, 247, 0.8); backdrop-filter: blur(5px);">
+
+<h3 style="color: #4A148C; margin-top: 0; margin-bottom: 25px; font-size: 22px; font-weight: 600;">
+📊 My Skills & Performance Dashboard
+</h3>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px; margin-bottom: 30px;">
+<div style="background: #f8f5ff; border-top: 3px solid #6E44FF; padding: 15px; border-radius: 6px; text-align: center;">
+<span style="font-size: 26px; font-weight: bold; color: #6E44FF; display: block;">+7</span>
+<span style="font-size: 13px; color: #666; font-weight: 500;">Training Hours</span>
+</div>
+<div style="background: #f8f5ff; border-top: 3px solid #6E44FF; padding: 15px; border-radius: 6px; text-align: center;">
+<span style="font-size: 26px; font-weight: bold; color: #6E44FF; display: block;">100%</span>
+<span style="font-size: 13px; color: #666; font-weight: 500;">On-Time Delivery</span>
+</div>
+<div style="background: #f8f5ff; border-top: 3px solid #6E44FF; padding: 15px; border-radius: 6px; text-align: center;">
+<span style="font-size: 26px; font-weight: bold; color: #6E44FF; display: block;">2+</span>
+<span style="font-size: 13px; color: #666; font-weight: 500;">Hands-on Projects</span>
+</div>
 </div>
 
-<i class="fa-solid fa-code" style="position: fixed; bottom: 20px; left: 20px; color: rgba(107, 70, 193, 0.15); font-size: 5rem; z-index: -1;"></i>
-<i class="fa-solid fa-laptop" style="position: fixed; top: 40px; right: 20px; color: rgba(107, 70, 193, 0.1); font-size: 6rem; z-index: -1;"></i>
+<div style="margin-bottom: 25px;">
+<h4 style="color: #4A148C; margin-bottom: 15px; font-size: 15px; font-weight: 600;">Technical & Practical Skills:</h4>
 
+<div style="margin-bottom: 15px;">
+<div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px; color: #333;">
+<span> Excel Analytical Repotying</span>
+<span style="font-weight: bold; color: #6E44FF;">90%</span>
+</div>
+<div style="background: #efecf9; height: 8px; border-radius: 4px; overflow: hidden;">
+<div style="background: #6E44FF; width: 90%; height: 100%; border-radius: 4px;"></div>
+</div>
+</div>
+
+<div style="margin-bottom: 15px;">
+<div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px; color: #333;">
+<span>Web Development (HTML / CSS Hobby)</span>
+<span style="font-weight: bold; color: #6E44FF;">74%</span>
+</div>
+<div style="background: #efecf9; height: 8px; border-radius: 4px; overflow: hidden;">
+<div style="background: #6E44FF; width: 74%; height: 100%; border-radius: 4px;"></div>
+</div>
+</div>
+
+<div style="margin-bottom: 15px;">
+<div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px; color: #333;">
+<span>SQL/ Data Management</span>
+<span style="font-weight: bold; color: #6E44FF;">60%</span>
+</div>
+<div style="background: #efecf9; height: 8px; border-radius: 4px; overflow: hidden;">
+<div style="background: #6E44FF; width: 60%; height: 100%; border-radius: 4px;"></div>
+</div>
+</div>
+
+<div style="margin-bottom: 15px;">
+<div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px; color: #333;">
+<span>Business Intelligence & Dashboards</span>
+<span style="font-weight: bold; color: #6E44FF;">40%</span>
+</div>
+<div style="background: #efecf9; height: 8px; border-radius: 4px; overflow: hidden;">
+<div style="background: #6E44FF; width: 40%; height: 100%; border-radius: 4px;"></div>
+</div>
+</div>
+</div>
+</div>
+
+</div> <i class="fa-solid fa-code" style="position: fixed; bottom: 20px; left: 20px; color: rgba(107, 70, 193, 0.15); font-size: 5rem; z-index: -1;"></i>
+<i class="fa-solid fa-laptop" style="position: fixed; top: 40px; right: 20px; color: rgba(107, 70, 193, 0.1); font-size: 6rem; z-index: -1;"></i>
 
 </body>
 </html>
+
